@@ -1,0 +1,86 @@
+.dog-card {
+    background-color: #f4e1c6 !important;
+    border-radius: 12px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+    padding: 16px; /* Padding inside the card */
+    text-align: left; /* Align text to the left for better readability */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects for hover */
+    position: relative; /* Position relative for absolute elements */
+    list-style-type: none; /* Removes the bullets */
+    margin-left: 0;        /* Removes default margin */
+}
+
+.dog-card:hover {
+    transform: translateY(-4px); /* Lift effect on hover */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.dog-image {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px; /* Match card's corners */
+}
+
+h2 {
+    font-size: 1.5rem; /* Use rem for better scalability */
+    color: #333;
+    margin: 12px 0;
+}
+
+.category {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure items can not wrap */
+    align-items: center; /* Align items properly if wrapping occurs */
+    gap: 5px; /* Adds some space between label and value */
+    margin-bottom: 20px; /* Space between categories */
+}
+
+.category.last {
+    margin-bottom: 50px;
+}
+
+.category-label {
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* Keep the label on one line */
+}
+
+.category-value {
+    font-weight: normal;
+    color: #555;
+    white-space: normal; /* Allow the value to wrap if too long */
+    word-wrap: break-word; /* Break long words if necessary */
+    overflow-wrap: break-word; /* For broader browser support */
+    margin-left: 0;
+}
+
+.dog-name-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #0354AB;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+    border: none;
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    width: calc(100% - 32px);
+}
+
+@media (max-width: 600px) {
+    .dog-name-button {
+        width: calc(100% - 32px);
+    }
+}
+
+.dog-name-button:hover, .dog-name-button:focus {
+    background-color: #023469;
+}
+
+.dog-name-button:focus {
+    outline: 3px solid #023469;
+    outline-offset: 2px; /* Offset to separate from button */
+}
